@@ -1,7 +1,12 @@
 //obj_final
 if !ativei{
 	ativei = true
-	var _mod = 1
+	var _mod = irandom_range(1, 2); //selecionar modulo aleatório
+	
+	while (_mod == modulo) {
+		_mod = irandom_range(1, 2)
+	}
+	
 	var _destinoX = x
 	var _destinoY = y
 
@@ -22,7 +27,6 @@ if !ativei{
 		y += 1056
 	}
 
-	show_debug_message("encostei")
 
 	
 }
