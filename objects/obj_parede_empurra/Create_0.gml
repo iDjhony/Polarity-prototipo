@@ -1,0 +1,2 @@
+origemx = x
+origemy = y

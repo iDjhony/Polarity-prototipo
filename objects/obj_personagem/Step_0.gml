@@ -61,5 +61,3 @@ if !flutuando { vel_y += gravidade }
 
 
 
-
-
