@@ -47,19 +47,7 @@ function modulo_repos() {
 			}
 		}
 	}
-	
-	
-	
-	
-	//with obj_modulo {
-	//	if y > room_height {
-	//		if modulo == 0 { instance_destroy() }
-	//		else {
-	//			x = origemx
-	//			y = origemy
-	//		}
-	//	}
-	//}
+
 }
 
 
