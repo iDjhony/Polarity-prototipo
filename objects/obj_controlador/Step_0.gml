@@ -8,7 +8,7 @@ if ativei {
 	}
 }
 
-
+//show_debug_message("Modulo: " + string(modulo) + " y: " + string(y))
 
 
 

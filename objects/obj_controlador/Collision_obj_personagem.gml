@@ -1,10 +1,11 @@
 //obj_final
 if !ativei{
 	ativei = true
-	var _mod = irandom_range(1, 2); //selecionar modulo aleatório
+	var _mod = irandom_range(1, global.total_modulos); //selecionar modulo aleatório
+	
 	
 	while (_mod == modulo) {
-		_mod = irandom_range(1, 2)
+		_mod = irandom_range(1, global.total_modulos)
 	}
 	
 	var _destinoX = x
@@ -24,10 +25,10 @@ if !ativei{
 	}
 	
 	with all {
-		y += 1056
+		y += 1024
 	}
-
-
+	
+	modulo_repos()
 	
 }
 
