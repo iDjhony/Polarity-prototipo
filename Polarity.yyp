@@ -37,7 +37,9 @@
   "resources":[
     {"id":{"name":"obj_colisor","path":"objects/obj_colisor/obj_colisor.yy",},},
     {"id":{"name":"obj_controlador","path":"objects/obj_controlador/obj_controlador.yy",},},
+    {"id":{"name":"obj_hud","path":"objects/obj_hud/obj_hud.yy",},},
     {"id":{"name":"obj_modulo","path":"objects/obj_modulo/obj_modulo.yy",},},
+    {"id":{"name":"obj_nevoa","path":"objects/obj_nevoa/obj_nevoa.yy",},},
     {"id":{"name":"obj_origem","path":"objects/obj_origem/obj_origem.yy",},},
     {"id":{"name":"obj_parede_empurra","path":"objects/obj_parede_empurra/obj_parede_empurra.yy",},},
     {"id":{"name":"obj_parede_puxa","path":"objects/obj_parede_puxa/obj_parede_puxa.yy",},},
@@ -48,6 +50,7 @@
     {"id":{"name":"scr_globais","path":"scripts/scr_globais/scr_globais.yy",},},
     {"id":{"name":"spr_colisor","path":"sprites/spr_colisor/spr_colisor.yy",},},
     {"id":{"name":"spr_controlador","path":"sprites/spr_controlador/spr_controlador.yy",},},
+    {"id":{"name":"spr_nevoa","path":"sprites/spr_nevoa/spr_nevoa.yy",},},
     {"id":{"name":"spr_origem","path":"sprites/spr_origem/spr_origem.yy",},},
     {"id":{"name":"spr_parede_empurra","path":"sprites/spr_parede_empurra/spr_parede_empurra.yy",},},
     {"id":{"name":"spr_parede_puxa","path":"sprites/spr_parede_puxa/spr_parede_puxa.yy",},},

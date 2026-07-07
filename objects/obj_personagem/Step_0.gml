@@ -1,4 +1,27 @@
 
+/*/////////////////////////////////////
+ESTADO DE VIDA DO JOGADOR
+/////////////////////////////////////*/
+if place_meeting(x, y, obj_nevoa) and vida > 0 {
+	vida -= 20 / 60
+} else if !place_meeting(x, y, obj_nevoa) and vida < 100 {
+	vida += 20 / 60
+}
+
+if vida <= 0 {
+	show_message("Tu morreu")
+	room_restart()
+}
+
+
+
+
+
+
+
+/*//////////////////////////////
+MECANICAS DE PUXAR E/OU EMPURRAR
+/////////////////////////////*/
 if global.puxar and global.empurrar {
 	flutuando = true
 } else if global.puxar {
@@ -32,12 +55,14 @@ if global.puxar and global.empurrar {
 	flutuando = false
 }
 
-
 if flutuando {
 	vel_x = lerp(vel_x, 0, 0.03)
 	vel_y = lerp(vel_y, 0, 0.03)
 }
 
+/*/////////////////////////////////
+COLISÃO DE CHÃO E PAREDES
+*/////////////////////////////////
 if (!place_meeting(x + vel_x, y, obj_colisor)){
 	x += vel_x
 } else { 
@@ -52,9 +77,9 @@ if (!place_meeting(x, y + vel_y, obj_colisor)){
 }
 
 
-
-
-//gravidade manual
+/*//////////////////////////////////
+GRAVIDADE MANUAL DO JOGO
+//////////////////////////////////*/
 if !flutuando { vel_y += gravidade }
 
 
