@@ -15,3 +15,5 @@ vel_x = 0
 vel_y = 0
 
 colidiu = false
+
+vida = 100
