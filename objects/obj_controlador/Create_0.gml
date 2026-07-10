@@ -7,3 +7,7 @@ if modulo > global.total_modulos { global.total_modulos = modulo }
 
 
 ativei = false
+
+modulo_atual = 0
+
+deslocamento = 1024

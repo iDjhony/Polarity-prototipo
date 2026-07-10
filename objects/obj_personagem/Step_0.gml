@@ -9,7 +9,7 @@ if place_meeting(x, y, obj_nevoa) and vida > 0 {
 }
 
 if vida <= 0 {
-	show_message("Tu morreu")
+	show_message("Não sobreviveu! Reiniciar?")
 	room_restart()
 }
 
@@ -24,6 +24,9 @@ MECANICAS DE PUXAR E/OU EMPURRAR
 /////////////////////////////*/
 if global.puxar and global.empurrar {
 	flutuando = true
+	
+	vel_x = lerp(vel_x, 0, 0.03)
+	vel_y = lerp(vel_y, 0, 0.03)
 } else if global.puxar {
 	flutuando = false
 	var _dir = point_direction(x, y, global.miraX, global.miraY)
@@ -55,10 +58,8 @@ if global.puxar and global.empurrar {
 	flutuando = false
 }
 
-if flutuando {
-	vel_x = lerp(vel_x, 0, 0.03)
-	vel_y = lerp(vel_y, 0, 0.03)
-}
+//if flutuando {
+//}
 
 /*/////////////////////////////////
 COLISÃO DE CHÃO E PAREDES
