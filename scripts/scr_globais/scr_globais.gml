@@ -7,7 +7,11 @@ global.empurrar = false
 
 global.total_modulos = 0
 
+global.personagem = 1
 
+//variávei da camera
+global.alvo_min_y = 0
+global.alvo_min_padrao = 0
 
 
 
@@ -49,6 +53,43 @@ function modulo_repos() {
 	}
 
 }
+
+function config_camera(_mod){
+
+	with obj_controlador { if modulo = _mod { global.alvo_min_padrao = y } }
+	global.alvo_min_y = global.alvo_min_padrao
+	
+}
+
+function rodar_camera(){
+	var cam = view_camera[0];
+	
+	//suaviza o limite da camera
+	
+	var _alvoX = 0
+	var _alvoY = obj_player.y - camera_get_view_height(cam)/2;
+	
+	if (global.alvo_min_y - global.alvo_min_padrao > 664) {
+	global.alvo_min_y = lerp(global.alvo_min_y, global.alvo_min_padrao, 0.003)
+	} else { 
+		global.alvo_min_y = lerp(global.alvo_min_y, global.alvo_min_padrao, 0.02)
+	} 
+	var _min = global.alvo_min_y - 10;
+	
+	//limita a camera dentro do módulo
+	_alvoY = clamp(_alvoY, _min, room_height)	
+	
+	//suavizar a transição da camera	
+	
+	camera_set_view_pos(cam, _alvoX, _alvoY)
+
+}
+
+
+
+
+
+
 
 
 

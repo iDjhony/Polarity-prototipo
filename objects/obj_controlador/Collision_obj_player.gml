@@ -8,6 +8,7 @@ if !ativei{
 		_mod = irandom_range(1, global.total_modulos)
 	}
 	
+	
 	var _destinoX = x
 	var _destinoY = y
 
@@ -27,6 +28,8 @@ if !ativei{
 	with all {
 		y += 1024
 	}
+	
+		global.alvo_min_y += 1024
 	
 	modulo_repos()
 	
