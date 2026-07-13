@@ -95,6 +95,14 @@ if puxar {
 	}
 	
 	
+	var _inst = collision_line(x, y, tentaculoX, tentaculoY, obj_modulo, false, true)
+	
+	if (_inst != noone){
+		if (collision_line(x, y, tentaculoX, tentaculoY, obj_paredes, false, true) != noone) {tent_preso = true}
+		else { empurrar = false }		
+	} 
+	
+	
 } else {
 	tentaculoComprimento = 0
 	
