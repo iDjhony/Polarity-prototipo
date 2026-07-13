@@ -21,8 +21,6 @@ tentaculoX = noone
 tentaculoY = noone
 
 
-//pontos do player
-global.pos_inicial = y
 
 //tentaculo do player
 tentaculoComprimento = 0

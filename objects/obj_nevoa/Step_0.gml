@@ -1,8 +1,8 @@
-//if y > 0 { y -= 0.5 }
+if y > 0 and global.nevoa { y-- }
 
-//if y - obj_player.y > 1000 {
-//	y = obj_player.y + 1000
-//}
+if y > room_height{
+	y = room_height
+}
 
 
 
