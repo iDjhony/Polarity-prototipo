@@ -3,6 +3,6 @@ switch (global.personagem){
 		instance_create_layer(x, y, "Player", obj_personagem);
 		break;
 	case 1:
-		instance_create_layer(x, y, "Player", obj_personagem2);
+		instance_create_layer(x, y, "Player", obj_personagem);
 		break;
 }

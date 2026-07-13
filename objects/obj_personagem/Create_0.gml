@@ -17,3 +17,18 @@ vel_y = 0
 colidiu = false
 
 vida = 100
+
+tentaculoX = noone
+tentaculoY = noone
+
+
+//tentaculo do player
+tentaculoComprimento = 0
+
+puxar = false
+empurrar = false
+
+miraX = noone
+miraY = noone
+
+tent_preso = false
