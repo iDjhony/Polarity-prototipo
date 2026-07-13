@@ -12,8 +12,8 @@
     "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"obj_modulo",
-    "path":"objects/obj_modulo/obj_modulo.yy",
+    "name":"obj_paredes",
+    "path":"objects/obj_paredes/obj_paredes.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

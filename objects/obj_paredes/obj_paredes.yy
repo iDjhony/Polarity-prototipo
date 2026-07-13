@@ -6,8 +6,8 @@
   "name":"obj_paredes",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Objs_pais",
+    "path":"folders/Objects/Objs_pais.yy",
   },
   "parentObjectId":{
     "name":"obj_modulo",
