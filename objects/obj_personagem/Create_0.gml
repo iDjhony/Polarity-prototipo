@@ -1,4 +1,3 @@
-
 gravidade = 0.1
 
 n_vel_x = 0
@@ -21,6 +20,9 @@ vida = 100
 tentaculoX = noone
 tentaculoY = noone
 
+
+//pontos do player
+global.pos_inicial = y
 
 //tentaculo do player
 tentaculoComprimento = 0

@@ -22,13 +22,7 @@ if vida <= 0 {
 /*//////////////////////////////
 MECANICAS DE PUXAR E/OU EMPURRAR
 /////////////////////////////*/
-if puxar and empurrar {
-	flutuando = true
-	vel_x = lerp(vel_x, 0, 0.03)
-	vel_y = lerp(vel_y, 0, 0.03)
-	
-} else if  puxar {
-	flutuando = false
+if puxar {
 	
 	var _dir = point_direction(x, y, miraX, miraY)	
 	var _dis = point_distance(x, y, miraX, miraY)
@@ -55,20 +49,22 @@ if puxar and empurrar {
 	
 	var _inst = collision_line(x, y, tentaculoX, tentaculoY, obj_modulo, false, true)
 	
-	if (_inst != noone){
-		if (collision_line(x, y, tentaculoX, tentaculoY, obj_paredes, false, true) != noone) {tent_preso = true}
-		else { puxar = false }		
+	if (_inst != noone){ 
+		if (collision_line(x, y, tentaculoX, tentaculoY, obj_paredes, false, true) != noone){
+			_inst = collision_line(x, y, tentaculoX, tentaculoY, obj_paredes, false, true)
+			if _inst.puxar { tent_preso = true }
+			else { puxar = false }		
+		} else { puxar = false }	
 	} 
 	
 	
 	
 } else if empurrar{
-	flutuando = false
 	
 	var _dir = point_direction(x, y, miraX, miraY)	
 	var _dis = point_distance(x, y, miraX, miraY)
 	
-	 if tent_preso {
+	 if tent_preso and _dis < 150 {
 		var _dirTent = point_direction(x, y, tentaculoX, tentaculoY);
 
 		n_vel_x = -lengthdir_x(vel * 0.6, _dirTent)
@@ -90,6 +86,17 @@ if puxar and empurrar {
 	
 	var _inst = collision_line(x, y, tentaculoX, tentaculoY, obj_modulo, false, true)
 	
+	if (_inst != noone){ 
+		if (collision_line(x, y, tentaculoX, tentaculoY, obj_paredes, false, true) != noone){
+			_inst = collision_line(x, y, tentaculoX, tentaculoY, obj_paredes, false, true)
+			if _inst.empurrar { tent_preso = true }
+			else { empurrar = false }		
+		}  else { empurrar = false }	
+	}
+	
+	
+	var _inst = collision_line(x, y, tentaculoX, tentaculoY, obj_modulo, false, true)
+	
 	if (_inst != noone){
 		if (collision_line(x, y, tentaculoX, tentaculoY, obj_paredes, false, true) != noone) {tent_preso = true}
 		else { empurrar = false }		
@@ -97,7 +104,6 @@ if puxar and empurrar {
 	
 	
 } else {
-	flutuando = false
 	tentaculoComprimento = 0
 	
 	tentaculoX = x
@@ -127,7 +133,7 @@ if (!place_meeting(x, y + vel_y, obj_colisor)){
 /*//////////////////////////////////
 GRAVIDADE MANUAL DO JOGO
 //////////////////////////////////*/
-if !flutuando { vel_y += gravidade }
+vel_y += gravidade
 
 
 

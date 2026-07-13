@@ -9,6 +9,10 @@ global.total_modulos = 0
 
 global.personagem = 1
 
+//pontos do player
+global.pontos = 0
+global.pos_inicial = 0
+
 //variávei da camera
 global.alvo_min_y = 0
 global.alvo_min_padrao = 0
@@ -85,6 +89,9 @@ function rodar_camera(){
 
 }
 
+function pontos_control(){
+	global.pontos += (global.pos_inicial - obj_player.y) /32
+}
 
 
 
