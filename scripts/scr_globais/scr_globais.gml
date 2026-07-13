@@ -10,8 +10,13 @@ global.total_modulos = 0
 global.personagem = 1
 
 //pontos do player
-global.pontos = 0
-global.pos_inicial = 0
+global.altura_max = 0
+global.pos_ref = 1216
+
+
+//Controla se a névoa avança 
+global.nevoa = false
+
 
 //variávei da camera
 global.alvo_min_y = 0
@@ -89,8 +94,16 @@ function rodar_camera(){
 
 }
 
-function pontos_control(){
-	global.pontos += (global.pos_inicial - obj_player.y) /32
+function controle_altura(_y){
+	var _altura = global.pos_ref - _y
+	
+	if _altura != 0 { _altura /= 320 }
+	
+	_altura = int64(_altura)
+	
+	_altura *= 10
+	
+	return _altura
 }
 
 

@@ -30,6 +30,7 @@ if !ativei{
 	}
 	
 		global.alvo_min_y += 1024
+		global.pos_ref += 1024
 	
 	modulo_repos()
 	

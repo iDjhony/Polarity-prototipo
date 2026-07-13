@@ -36,7 +36,7 @@ if puxar {
 		vel_x = lerp(vel_x, n_vel_x, 0.2)
 		vel_y = lerp(vel_y, n_vel_y, 0.2)
 		
-	} else if tentaculoComprimento < 170 {
+	} else if tentaculoComprimento < 200 {
 		tentaculoComprimento += 30
 	} else {
 		puxar = false
@@ -64,7 +64,7 @@ if puxar {
 	var _dir = point_direction(x, y, miraX, miraY)	
 	var _dis = point_distance(x, y, miraX, miraY)
 	
-	 if tent_preso and _dis < 150 {
+	 if tent_preso and _dis < 200 {
 		var _dirTent = point_direction(x, y, tentaculoX, tentaculoY);
 
 		n_vel_x = -lengthdir_x(vel * 0.6, _dirTent)
