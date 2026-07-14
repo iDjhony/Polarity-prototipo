@@ -5,3 +5,4 @@ origemy = y
 
 puxar = false
 empurrar = true
+gancho = false

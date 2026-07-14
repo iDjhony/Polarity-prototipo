@@ -7,7 +7,7 @@ flutuando = false
 
 definiu_speed = false
 
-vel = 10
+vel = 8
 
 vel_x = 0
 
