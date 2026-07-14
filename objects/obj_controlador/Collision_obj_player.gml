@@ -1,7 +1,7 @@
 //obj_final
 if !ativei{
 	ativei = true
-	var _mod = irandom_range(1, global.total_modulos); //selecionar modulo aleatório
+	var _mod =9// irandom_range(1, global.total_modulos); //selecionar modulo aleatório
 	
 	
 	while (_mod == modulo) {

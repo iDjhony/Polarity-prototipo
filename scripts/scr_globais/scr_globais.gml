@@ -106,7 +106,11 @@ function controle_altura(_y){
 	return _altura
 }
 
-
+function reiniciar_jogo(){
+	room_restart()
+	global.nevoa = false
+	global.pos_ref = 1216
+}
 
 
 
