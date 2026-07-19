@@ -128,6 +128,14 @@ if (!place_meeting(x, y + vel_y, obj_colisor)){
 
 
 /*//////////////////////////////////
+EDITANDO DIREÇÃO DA IMAGEM
+//////////////////////////////////*/
+if vel_x < 0 { image_xscale = -1 }
+else { image_xscale = 1}
+
+
+
+/*//////////////////////////////////
 GRAVIDADE MANUAL DO JOGO
 //////////////////////////////////*/
 vel_y += gravidade
