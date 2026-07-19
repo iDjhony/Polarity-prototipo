@@ -1,0 +1,1 @@
+global.pause_menu = !global.pause_menu;

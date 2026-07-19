@@ -1,3 +1,4 @@
+
 // Declaração de globais
 global.miraX = noone
 global.miraY = noone
@@ -22,6 +23,9 @@ global.nevoa = false
 global.alvo_min_y = 0
 global.alvo_min_padrao = 0
 
+
+//variável de pause do jogo
+global.pause_menu = false 
 
 
 //funçoes
